@@ -9,7 +9,7 @@
 | 1 - Fundamentos | Completada | 8/8 documentos |
 | 2 - Producto | Completada | 139/139 historias |
 | 3 - Negocio y Legal | Completada | 15/15 entregables |
-| 4 - Construccion | En progreso | 3/6 hitos |
+| 4 - Construccion | En progreso | 4/6 hitos |
 | 5 - Salida y Escala | Pendiente | 0/0 |
 
 ## Detalle por oleada
@@ -70,7 +70,7 @@ Todos los documentos base del proyecto entregados:
 - [x] CON-01 - Brief tecnico para desarrollador
 - [x] CON-02 - Proceso de seleccion y contratacion
 - [x] CON-03 - Kickoff y configuracion del entorno
-- [ ] CON-04 - Desarrollo del MVP
+- [x] CON-04 - Desarrollo del MVP
 - [ ] CON-05 - Validacion con Liga Cero
 - [ ] CON-06 - Pilotos con los 4 excompaneros
 
@@ -109,11 +109,12 @@ Todos los documentos base del proyecto entregados:
 
 ## Proximos pasos inmediatos
 
-1. Completar CON-04 (desarrollo del MVP) - iniciar contratacion.
-2. Configurar entorno tecnico (ramas, CI/CD, servicios).
-3. Publicar vacante de desarrollador.
-4. Iniciar entrevistas.
-5. Arrancar sprint 1.
+1. Completar CON-05 (validacion con Liga Cero).
+2. Completar CON-06 (pilotos con los 4 excompaneros).
+3. Configurar entorno tecnico (ramas, CI/CD, servicios).
+4. Publicar vacante de desarrollador.
+5. Iniciar entrevistas.
+6. Arrancar sprint 1.
 
 ## Riesgos actuales
 

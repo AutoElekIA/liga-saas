@@ -82,6 +82,7 @@ Documentos base del proyecto.
 | [brief-desarrollador.md](brief-desarrollador.md) | Instrucciones para el desarrollador |
 | [proceso-contratacion.md](proceso-contratacion.md) | Como contratar al primer dev |
 | [kickoff-entorno.md](kickoff-entorno.md) | Configuracion del entorno tecnico |
+| [desarrollo-mvp.md](desarrollo-mvp.md) | Plan de construccion del MVP (22 sprints) |
 
 ## Oleada 5 - Salida y Escala
 
