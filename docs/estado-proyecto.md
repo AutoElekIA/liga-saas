@@ -9,14 +9,12 @@
 | 1 - Fundamentos | Completada | 8/8 documentos |
 | 2 - Producto | Completada | 139/139 historias |
 | 3 - Negocio y Legal | Completada | 15/15 entregables |
-| 4 - Construccion | En progreso | 4/6 hitos |
+| 4 - Construccion | Completada | 6/6 hitos |
 | 5 - Salida y Escala | Pendiente | 0/0 |
 
 ## Detalle por oleada
 
 ### Oleada 1 - Fundamentos (Completada)
-
-Todos los documentos base del proyecto entregados:
 
 - [x] Vision
 - [x] Alcance del MVP
@@ -29,7 +27,7 @@ Todos los documentos base del proyecto entregados:
 
 ### Oleada 2 - Producto (Completada)
 
-139 historias de usuario agrupadas en 10 epicas, todas con criterios de aceptacion, estimacion, dependencias y edge cases. Todas en GitHub Issues.
+139 historias de usuario agrupadas en 10 epicas.
 
 - [x] Epica 1 - Cimientos multi-tenant (12 HU)
 - [x] Epica 2 - Registro de equipos y jugadores (14 HU)
@@ -44,14 +42,14 @@ Todos los documentos base del proyecto entregados:
 
 ### Oleada 3 - Negocio y Legal (Completada)
 
-**Negocio (5 entregables):**
+**Negocio (5):**
 - [x] Pricing final
 - [x] Propuesta de valor por segmento
 - [x] Buyer personas
-- [x] Material comercial (deck, one-pager, script, caso)
+- [x] Material comercial
 - [x] Go-to-market
 
-**Legal (7 entregables):**
+**Legal (7):**
 - [x] Figura legal y constitucion
 - [x] Terminos y condiciones del SaaS
 - [x] Politica de privacidad (LFPDPPP)
@@ -60,19 +58,19 @@ Todos los documentos base del proyecto entregados:
 - [x] NDAs y proteccion de PI
 - [x] Guia de registro de marca IMPI
 
-**Operacion (3 entregables):**
+**Operacion (3):**
 - [x] Manual de onboarding
 - [x] Manual de soporte
 - [x] Playbook de ventas
 
-### Oleada 4 - Construccion (En progreso)
+### Oleada 4 - Construccion (Completada)
 
 - [x] CON-01 - Brief tecnico para desarrollador
 - [x] CON-02 - Proceso de seleccion y contratacion
 - [x] CON-03 - Kickoff y configuracion del entorno
 - [x] CON-04 - Desarrollo del MVP
-- [ ] CON-05 - Validacion con Liga Cero
-- [ ] CON-06 - Pilotos con los 4 excompaneros
+- [x] CON-05 - Validacion con Liga Cero
+- [x] CON-06 - Pilotos con los 4 excompaneros
 
 ### Oleada 5 - Salida y Escala (Pendiente)
 
@@ -89,7 +87,7 @@ Todos los documentos base del proyecto entregados:
 |---|---|---|
 | Ligas activas | 0 | 20 |
 | MRR | $0 | $60,000 MXN |
-| Documentos completados | 30+ | - |
+| Documentos completados | 35+ | - |
 | Historias en backlog | 139 | - |
 | Historias implementadas | 0 | 139 |
 | Inversion inicial | $0 | $150,000 MXN |
@@ -101,6 +99,7 @@ Todos los documentos base del proyecto entregados:
 | Oleada 1 completada | Octubre 2026 | Completado |
 | Oleada 2 completada | Octubre 2026 | Completado |
 | Oleada 3 completada | Octubre 2026 | Completado |
+| Oleada 4 completada | Octubre 2026 | Completado |
 | Desarrollador contratado | Diciembre 2026 | Pendiente |
 | MVP v1.0 | Junio 2027 | Pendiente |
 | 4 pilotos operando | Julio 2027 | Pendiente |
@@ -109,18 +108,18 @@ Todos los documentos base del proyecto entregados:
 
 ## Proximos pasos inmediatos
 
-1. Completar CON-05 (validacion con Liga Cero).
-2. Completar CON-06 (pilotos con los 4 excompaneros).
-3. Configurar entorno tecnico (ramas, CI/CD, servicios).
-4. Publicar vacante de desarrollador.
-5. Iniciar entrevistas.
-6. Arrancar sprint 1.
+1. Ejecutar Oleada 5 (Salida y Escala).
+2. Configurar entorno tecnico.
+3. Publicar vacante de desarrollador.
+4. Iniciar entrevistas.
+5. Arrancar sprint 1.
 
 ## Riesgos actuales
 
 | Riesgo | Nivel | Mitigacion |
 |---|---|---|
-| No encontrar dev en 4 semanas | Medio | Ampliar canales a Workana y Upwork |
-| Costos iniciales mayores a lo previsto | Bajo | Empezar con stack gratuito |
-| MVP toma mas tiempo del estimado | Medio | Priorizar modulos criticos |
+| No encontrar dev en 4 semanas | Medio | Ampliar canales |
+| Costos iniciales mayores | Bajo | Stack gratuito inicial |
+| MVP toma mas tiempo | Medio | Priorizar criticos |
 | Adopcion lenta de pilotos | Bajo | Onboarding asistido |
+

@@ -8,8 +8,6 @@ Catalogo completo de la documentacion del SaaS de administracion de ligas de fut
 
 ## Oleada 1 - Fundamentos
 
-Documentos base del proyecto.
-
 | Documento | Descripcion |
 |---|---|
 | [01-vision.md](01-vision.md) | Que es el producto, para quien, por que |
@@ -53,7 +51,7 @@ Documentos base del proyecto.
 ### Comercial
 | Documento | Descripcion |
 |---|---|
-| [comercial/01-deck.md](comercial/01-deck.md) | Deck de presentacion (12 slides) |
+| [comercial/01-deck.md](comercial/01-deck.md) | Deck de presentacion |
 | [comercial/02-one-pager.md](comercial/02-one-pager.md) | One-pager ejecutivo |
 | [comercial/03-script-demo.md](comercial/03-script-demo.md) | Script de demo de 30 min |
 | [comercial/04-caso-exito.md](comercial/04-caso-exito.md) | Caso de exito Liga Cero |
@@ -75,7 +73,7 @@ Documentos base del proyecto.
 | [manual-onboarding.md](manual-onboarding.md) | Como activar una nueva liga |
 | [manual-soporte.md](manual-soporte.md) | Como resolver problemas |
 
-## Oleada 4 - Construccion
+## Oleada 4 - Construccion (Completada)
 
 | Documento | Descripcion |
 |---|---|
@@ -83,6 +81,8 @@ Documentos base del proyecto.
 | [proceso-contratacion.md](proceso-contratacion.md) | Como contratar al primer dev |
 | [kickoff-entorno.md](kickoff-entorno.md) | Configuracion del entorno tecnico |
 | [desarrollo-mvp.md](desarrollo-mvp.md) | Plan de construccion del MVP (22 sprints) |
+| [validacion-liga-cero.md](validacion-liga-cero.md) | Validacion del MVP antes de pilotos |
+| [pilotos.md](pilotos.md) | Pilotos con los 4 excompaneros |
 
 ## Oleada 5 - Salida y Escala
 
