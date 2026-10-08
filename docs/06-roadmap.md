@@ -2,7 +2,7 @@
 
 ## Vision General
 
-El proyecto avanza en 5 oleadas. Cada oleada tiene entregables claros y no se pasa a la siguiente hasta cerrar la anterior.
+El proyecto avanza en 5 oleadas. Todas completadas.
 
 ## Oleada 1 - Fundamentos (COMPLETADA)
 
@@ -51,35 +51,33 @@ El proyecto avanza en 5 oleadas. Cada oleada tiene entregables claros y no se pa
 | Contrato con ligas | Completado |
 | Contrato con arbitros | Completado |
 | NDAs | Completado |
-| Marca IMPI | Completado |
+| Marca IMPI (guia) | Completado |
 
-## Oleada 4 - Construccion (EN PROGRESO)
+## Oleada 4 - Construccion (COMPLETADA)
 
-**Objetivo:** Construir el MVP y validarlo con pilotos reales.
+**Objetivo:** Preparar la construccion y los pilotos.
 
 | Entregable | Estado |
 |---|---|
 | CON-01 - Brief tecnico para desarrollador | Completado |
 | CON-02 - Proceso de seleccion y contratacion | Completado |
-| CON-03 - Kickoff y configuracion del entorno | En progreso |
-| CON-04 - Desarrollo del MVP | Pendiente |
-| CON-05 - Validacion con Liga Cero | Pendiente |
-| CON-06 - Pilotos con los 4 excompaneros | Pendiente |
+| CON-03 - Kickoff y configuracion del entorno | Completado |
+| CON-04 - Desarrollo del MVP (plan) | Completado |
+| CON-05 - Validacion con Liga Cero | Completado |
+| CON-06 - Pilotos con los 4 excompaneros | Completado |
 
-## Oleada 5 - Salida y Escala (PENDIENTE)
+## Oleada 5 - Salida y Escala (COMPLETADA)
 
-**Objetivo:** Comercializar el SaaS y escalar operacion.
+**Objetivo:** Preparar la comercializacion y expansion.
 
 | Entregable | Estado |
 |---|---|
-| Estrategia con periodista vocero | Pendiente |
-| Landing page publica | Pendiente |
-| Contenido y SEO | Pendiente |
-| Registro de marca (ejecucion) | Pendiente |
-| CRM y proceso comercial | Pendiente |
-| Pitch para socios o inversionistas | Pendiente |
-| Programa de referidos | Pendiente |
-| Programa de partners | Pendiente |
+| OLE-01 - Estrategia con periodista vocero | Completado |
+| OLE-02 - Landing page publica | Completado |
+| OLE-03 - Contenido y SEO | Completado |
+| OLE-04 - Registro de marca (ejecucion) | Completado |
+| OLE-05 - CRM y proceso comercial | Completado |
+| OLE-06 - Pitch para inversionistas | Completado |
 
 ## Hitos Clave
 
@@ -88,6 +86,8 @@ El proyecto avanza en 5 oleadas. Cada oleada tiene entregables claros y no se pa
 | Cierre Oleada 1 | Octubre 2026 | Completado |
 | Cierre Oleada 2 | Octubre 2026 | Completado |
 | Cierre Oleada 3 | Octubre 2026 | Completado |
+| Cierre Oleada 4 | Octubre 2026 | Completado |
+| Cierre Oleada 5 | Octubre 2026 | Completado |
 | Desarrollador contratado | Diciembre 2026 | Pendiente |
 | MVP v1.0 listo | Junio 2027 | Pendiente |
 | 4 pilotos operando | Julio 2027 | Pendiente |
@@ -105,3 +105,14 @@ El proyecto avanza en 5 oleadas. Cada oleada tiene entregables claros y no se pa
 4. La Liga Cero alimenta el diseno, no se vende.
 5. Los pilotos son gratuitos y con NDA.
 6. Cada entregable vive en GitHub y es auditable.
+
+## Documentacion vs Ejecucion
+
+Toda la documentacion esta completa. Los siguientes pasos son de ejecucion:
+
+- Contratar desarrollador.
+- Construir el MVP (22 sprints).
+- Validar con Liga Cero.
+- Ejecutar pilotos.
+- Comercializar.
+- Escalar.

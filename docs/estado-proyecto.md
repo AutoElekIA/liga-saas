@@ -10,7 +10,7 @@
 | 2 - Producto | Completada | 139/139 historias |
 | 3 - Negocio y Legal | Completada | 15/15 entregables |
 | 4 - Construccion | Completada | 6/6 hitos |
-| 5 - Salida y Escala | Pendiente | 0/0 |
+| 5 - Salida y Escala | Completada | 6/6 hitos |
 
 ## Detalle por oleada
 
@@ -27,7 +27,7 @@
 
 ### Oleada 2 - Producto (Completada)
 
-139 historias de usuario agrupadas en 10 epicas.
+139 historias de usuario en 10 epicas.
 
 - [x] Epica 1 - Cimientos multi-tenant (12 HU)
 - [x] Epica 2 - Registro de equipos y jugadores (14 HU)
@@ -72,14 +72,14 @@
 - [x] CON-05 - Validacion con Liga Cero
 - [x] CON-06 - Pilotos con los 4 excompaneros
 
-### Oleada 5 - Salida y Escala (Pendiente)
+### Oleada 5 - Salida y Escala (Completada)
 
-- [ ] Estrategia con periodista vocero
-- [ ] Landing page publica
-- [ ] Contenido y SEO
-- [ ] Registro de marca
-- [ ] CRM y proceso comercial
-- [ ] Pitch para socios o inversionistas
+- [x] OLE-01 - Estrategia con periodista vocero
+- [x] OLE-02 - Landing page publica
+- [x] OLE-03 - Contenido y SEO
+- [x] OLE-04 - Registro de marca (ejecucion)
+- [x] OLE-05 - CRM y proceso comercial
+- [x] OLE-06 - Pitch para inversionistas
 
 ## Metricas clave
 
@@ -87,7 +87,7 @@
 |---|---|---|
 | Ligas activas | 0 | 20 |
 | MRR | $0 | $60,000 MXN |
-| Documentos completados | 35+ | - |
+| Documentos completados | 40+ | - |
 | Historias en backlog | 139 | - |
 | Historias implementadas | 0 | 139 |
 | Inversion inicial | $0 | $150,000 MXN |
@@ -100,6 +100,7 @@
 | Oleada 2 completada | Octubre 2026 | Completado |
 | Oleada 3 completada | Octubre 2026 | Completado |
 | Oleada 4 completada | Octubre 2026 | Completado |
+| Oleada 5 completada | Octubre 2026 | Completado |
 | Desarrollador contratado | Diciembre 2026 | Pendiente |
 | MVP v1.0 | Junio 2027 | Pendiente |
 | 4 pilotos operando | Julio 2027 | Pendiente |
@@ -108,18 +109,19 @@
 
 ## Proximos pasos inmediatos
 
-1. Ejecutar Oleada 5 (Salida y Escala).
-2. Configurar entorno tecnico.
-3. Publicar vacante de desarrollador.
-4. Iniciar entrevistas.
+Toda la documentacion esta completa. Los siguientes pasos son de ejecucion:
+
+1. Configurar entorno tecnico (ramas, CI/CD, servicios).
+2. Publicar vacante de desarrollador.
+3. Iniciar entrevistas.
+4. Contratar al primer dev.
 5. Arrancar sprint 1.
 
 ## Riesgos actuales
 
 | Riesgo | Nivel | Mitigacion |
 |---|---|---|
-| No encontrar dev en 4 semanas | Medio | Ampliar canales |
+| No encontrar dev en 4 semanas | Medio | Ampliar canales a Workana y Upwork |
 | Costos iniciales mayores | Bajo | Stack gratuito inicial |
-| MVP toma mas tiempo | Medio | Priorizar criticos |
+| MVP toma mas tiempo | Medio | Priorizar modulos criticos |
 | Adopcion lenta de pilotos | Bajo | Onboarding asistido |
-

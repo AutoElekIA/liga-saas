@@ -84,9 +84,16 @@ Catalogo completo de la documentacion del SaaS de administracion de ligas de fut
 | [validacion-liga-cero.md](validacion-liga-cero.md) | Validacion del MVP antes de pilotos |
 | [pilotos.md](pilotos.md) | Pilotos con los 4 excompaneros |
 
-## Oleada 5 - Salida y Escala
+## Oleada 5 - Salida y Escala (Completada)
 
-Pendiente de definir.
+| Documento | Descripcion |
+|---|---|
+| [periodista-vocero.md](periodista-vocero.md) | Estrategia con periodista Media Partner |
+| [landing-page.md](landing-page.md) | Estructura, copy y SEO de la landing |
+| [contenido-seo.md](contenido-seo.md) | Estrategia de contenido y posicionamiento |
+| [registro-marca-ejecucion.md](registro-marca-ejecucion.md) | Ejecucion del tramite en IMPI |
+| [crm-proceso-comercial.md](crm-proceso-comercial.md) | Pipeline y proceso de ventas |
+| [pitch-inversion.md](pitch-inversion.md) | Pitch para socios o inversionistas |
 
 ## Otros recursos
 
