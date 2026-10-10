@@ -147,3 +147,8 @@ vite.config.ts.timestamp-*
 
 # Turbo Repo
 .turbo
+
+# Backups personales
+_backups/
+*.bundle
+*.bundle.gpg
