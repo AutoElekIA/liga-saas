@@ -2,84 +2,137 @@
 
 **Ultima actualizacion:** Octubre 2026
 
-## Pipeline de candidatos (10 activos)
+## Presupuesto maximo
 
-### Top 3 (nivel excepcional)
+- Base: $2,000 USD/mes para el dev principal
+- Variable por sprint + bono MVP
+- Zona horaria titular: 10pm-8am Mexico (nocturno)
 
-#### 1. Karina K.
+## Pipeline activo (10 candidatos)
+
+### Top del pipeline
+
+#### 1. Karina K. - TOP 1
 - Canal: Workana
-- Ubicacion: Japon (10h solapamiento con horario nocturno del titular)
-- Precio: USD 2,000/mes (USD 500/sprint semanal)
-- Insights: RLS con FORCE, PgBouncer, current_setting fail-closed, SELECT FOR UPDATE en fianzas, UNIQUE en ID del telefono, iOS+IndexedDB
-- Estado: Videollamada pendiente de agendar (miercoles/jueves, 11pm Mexico)
-- Demo: Ofrece demo en vivo de RLS con 2 organizaciones
+- Pais: Japon (UTC+9) — 10h solapamiento
+- Precio: USD $2,000/mes (USD $500/sprint semanal)
+- Insights: RLS FORCE, PgBouncer, current_setting fail-closed, SELECT FOR UPDATE, UNIQUE en ID, iOS+IndexedDB
+- Estado: Videollamada pendiente (miercoles/jueves, 11pm Mexico)
+- Demo en vivo ofrecida
 
-#### 2. Angel
+#### 2. Azamat H. - TOP 2
 - Canal: Workana
-- Ubicacion: Por confirmar (probablemente LATAM)
+- Pais: Uzbekistán (UTC+5) — 10h solapamiento
+- Precio: USD $30/h (~$4,800/mes) — requiere negociacion
+- Insights: Demo funcional construida (RLS + Trust Engine + Mercado Pago + PWA)
+- Experiencia: gymflow.io, classlift.app (SaaS deportivos)
+- Estado: Pedir aclaraciones sobre demo, rol en SaaS, flexibilidad de precio
+
+#### 3. Kelly C. - TOP 3
+- Canal: Workana
+- Pais: Venezuela (UTC-4) — 2h solapamiento
+- Precio: MXN $41,693 (por definir si es por hito)
+- Rating: 4.7/5 (137 calificaciones), 116 proyectos, top 1% mundial
+- Insights: Prisma $extends + SET LOCAL, 52 tablas con RLS forzado
+- Estado: Pedir flexibilidad de precio, confirmar zona horaria
+
+#### 4. Angel
+- Canal: Workana
+- Pais: Por confirmar
 - Precio: Por confirmar
-- Insights: Resolucion de conflictos con contador monotono por dispositivo, event sourcing, append-only
-- Portafolio verificable: lumona.com.br (Mercado Pago + Stripe), onlymassage.io, justdance.co + apps iOS/Android, modelso.io
-- Estado: Sesion tecnica por chat (prefiere escrito a llamada)
-- Preguntas pendientes: persistencia del contador, event sourcing Trust Engine
+- Insights: Resolucion de conflictos con contador monotono, event sourcing
+- Portafolio verificable: lumona.com.br (Mercado Pago + Stripe), justdance.co, modelso.io
+- Estado: Pedir precio, confirmar zona horaria
 
-#### 3. Lucien
+#### 5. Lucien
 - Canal: Workana
-- Ubicacion: Canada (Este) - 1-2h solapamiento
+- Pais: Canada Este (UTC-4) — 1-2h solapamiento
 - Precio: Por confirmar
-- Insights: Interceptor por peticion + set_config + guards por rol, Coast (conciliacion GPS), honestidad sobre limitaciones
-- Estado: Por confirmar modalidad (videollamada en ingles o sesion escrita)
-- Nota: GitHub mayormente privado por NDA. Prefiere texto para tecnico.
+- Insights: Interceptor por peticion + set_config + guards, Coast (conciliacion GPS)
+- Nota: Prefiere texto para tecnico. GitHub mayormente privado.
+- Estado: Confirmar modalidad (texto vs videollamada en ingles)
 
-### Nivel alto (7 candidatos)
+#### 6. Hercules
+- Canal: Workana
+- Pais: Brasil (UTC-3) — 2h solapamiento
+- Precio: USD $30/h (~$4,800/mes) — fuera de tope
+- Insights: Comprension de negocio + disciplina de ejecucion excepcionales
+- Estado: Pedir flexibilidad de precio
 
-| # | Candidato | Fortaleza | Estado |
-|---|---|---|---|
-| 4 | Guilherme M. | BilleteraEquipo + Trust Engine + preparacion de llamada | Videollamada pendiente (reagendar a horario nocturno) |
-| 5 | Cesar F. | Arquitecto 15+ anos + iOS + IndexedDB | Por responder |
-| 6 | Takeshi K. | Vertical slice + industria | Por responder |
-| 7 | Hendra K. | Enum con historial + orden dependencias | Por responder |
-| 8 | Stanley Q. | RLS + offline con cuidado | Por responder |
-| 9 | Rocio G. M. | Idempotencia + OXXO | Por responder |
-| 10 | Matheus M. M. | Stack completo | Por responder |
+#### 7. Guilherme M.
+- Canal: Workana
+- Pais: Mexico (UTC-6) — 0h solapamiento con horario nocturno
+- Precio: Por confirmar
+- Insights: BilleteraEquipo + Trust Engine + preparacion detallada
+- Estado: Reagendar videollamada a horario nocturno
 
-## Descartados (8)
+#### 8. Cesar F.
+- Canal: Workana
+- Pais: Mexico (UTC-6)
+- Precio: MXN $350/h (~$2,800/mes) — fuera de tope
+- Insights: Arquitecto 15+ anos, iOS + IndexedDB
+- Estado: Pedir flexibilidad de precio
+
+#### 9. Takeshi K.
+- Canal: Workana
+- Precio: Por confirmar
+- Insights: Vertical slice + industria (LeagueApps, TeamSnap, SportsEngine)
+- Estado: Pedir precio y disponibilidad
+
+#### 10. Hendra K.
+- Canal: Workana
+- Precio: Por confirmar
+- Insights: Enum con historial + orden de dependencias
+- Estado: Pedir precio y disponibilidad
+
+### Segunda linea
+
+- Elmer L. (Peru) — RLS en capa de aplicacion, no en motor
+- Francisco M. (Argentina) — Stack correcto, sin RLS explicito
+- Diego Y. (Colombia) — $35,000 MXN/mes, mobile heavy
+- Stanley Q. — RLS + offline, sin destacar
+- Rocio G. M. — Idempotencia + OXXO, sin destacar
+- Matheus M. M. — Stack completo, sin destacar
+
+### Descartados
 
 - Duart N. (competidor directo - Copa Final)
-- James (quiere ampliar scope)
-- Raul T. (junior real, CV inflado)
-- Ono H. (competidor directo - Cascarita Fut-Cam)
-- Joao / Nexora T. (nivel bajo, portafolio websites)
+- Ono H. (competidor activo - Cascarita)
+- James (scope creep)
+- Raul T. (junior con CV inflado)
+- Alan A. (junior)
+- Joao / Nexora T. (nivel bajo)
+- Rafael Naranjo (no es SaaS)
 - Carlos (generico)
 - Valentina C. (agencia, vendor lock-in)
-- + candidatos que no pasaron filtro
+- Beilor D. (perfil popurri sin especializacion)
 
-## Proximos pasos inmediatos
+## Proximos pasos
 
-- [ ] Videollamada con Karina (miercoles/jueves, 11pm Mexico)
+- [ ] Videollamada con Karina (confirmar miercoles/jueves 11pm)
+- [ ] Respuesta a Azamat (aclarar demo, precio, zona)
+- [ ] Respuesta a Kelly (flexibilidad precio)
+- [ ] Pedir precio a Angel, Lucien, Takeshi, Hendra
 - [ ] Reagendar Guilherme a horario nocturno
-- [ ] Sesion escrita con Angel (chat Workana)
-- [ ] Confirmar modalidad con Lucien
-- [ ] Recibir respuestas de los otros 6
+- [ ] Preguntar flexibilidad a Hercules y Cesar
 - [ ] Verificar GitHub de los finalistas
-- [ ] Preparar prueba tecnica pagada
+- [ ] Aplicar prueba tecnica pagada a los 2 mejores
 - [ ] Decision final
+- [ ] Contratar
+- [ ] Sprint 1
 
-## Guion de entrevista
+## Criterios de decision final
 
-Ver docs/proceso-contratacion.md y docs/paquete-reclutamiento.md.
+1. Nivel tecnico verificado (RLS + offline + Mercado Pago)
+2. Precio dentro del tope ($2,000 USD/mes)
+3. Zona horaria compatible con nocturno
+4. GitHub verificable
+5. Ajuste cultural
+6. NDA + cesion sin dudar
 
-## Limitaciones de Workana
+## Documentos relacionados
 
-- No permite compartir email, telefono ni WhatsApp antes de contratar
-- GitHub y LinkedIn estan permitidos
-- Videollamada integrada en la plataforma
-- Al contratar se libera el contacto completo
-
-## Notas estrategicas
-
-- Horario del titular: 10pm-8am Mexico (nocturno)
-- Zona horaria ideal: Japon, Australia, Europa del Este
-- Zona horaria problematica: LATAM, USA/Canada
-- Presupuesto MVP: $400,000-600,000 MXN
-- Modelo de pago acordado: base + variable + bono MVP
+- docs/decisiones-tomadas.md
+- docs/proceso-contratacion.md
+- docs/paquete-reclutamiento.md
+- docs/prompt-restauracion.md
