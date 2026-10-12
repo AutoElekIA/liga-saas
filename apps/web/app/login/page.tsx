@@ -2,22 +2,34 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { createClient } from '@/lib/supabase/client';
 
 export default function LoginPage() {
   const router = useRouter();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setLoading(true);
+    setError(null);
 
-    // TODO: integrar con Supabase Auth
-    await new Promise((r) => setTimeout(r, 500));
+    const supabase = createClient();
+    const { error: signInError } = await supabase.auth.signInWithPassword({
+      email,
+      password,
+    });
 
-    setLoading(false);
-    router.push('/');
+    if (signInError) {
+      setError(signInError.message);
+      setLoading(false);
+      return;
+    }
+
+    router.push('/dashboard');
+    router.refresh();
   }
 
   return (
@@ -52,6 +64,12 @@ export default function LoginPage() {
           />
         </label>
 
+        {error && (
+          <p className="mb-4 text-sm text-red-600 bg-red-50 p-2 rounded">
+            {error}
+          </p>
+        )}
+
         <button
           type="submit"
           disabled={loading}
@@ -61,7 +79,7 @@ export default function LoginPage() {
         </button>
 
         <p className="text-xs text-gray-500 mt-4 text-center">
-          Demo: cualquier email y contrasena funcionan.
+          Usa las credenciales creadas en Supabase Auth.
         </p>
       </form>
     </main>

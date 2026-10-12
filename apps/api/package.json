@@ -11,10 +11,13 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
+    "@liga-saas/db": "workspace:*",
+    "@liga-saas/types": "workspace:*",
     "@nestjs/common": "^10.4.15",
     "@nestjs/config": "^3.3.0",
     "@nestjs/core": "^10.4.15",
     "@nestjs/platform-express": "^10.4.15",
+    "@supabase/supabase-js": "^2.117.3",
     "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.1"
   },
@@ -33,13 +36,19 @@
     "typescript": "^5.7.2"
   },
   "jest": {
-    "moduleFileExtensions": ["js", "json", "ts"],
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
     "rootDir": "src",
     "testRegex": ".*\\.spec\\.ts$",
     "transform": {
       "^.+\\.(t|j)s$": "ts-jest"
     },
-    "collectCoverageFrom": ["**/*.(t|j)s"],
+    "collectCoverageFrom": [
+      "**/*.(t|j)s"
+    ],
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
   }
