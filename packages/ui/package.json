@@ -6,6 +6,7 @@
   "types": "./src/index.tsx",
   "scripts": {
     "build": "tsc",
+    "lint": "eslint \"src/**/*.{ts,tsx}\"",
     "clean": "rm -rf dist"
   },
   "peerDependencies": {
