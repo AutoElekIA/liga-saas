@@ -56,7 +56,7 @@ El servicio se presta en modalidad SaaS (Software as a Service), sin transferenc
 - Los pagos son mensuales o anuales, segun el plan contratado.
 - El servicio se cobra por adelantado.
 - Los precios no incluyen IVA.
-- Los pagos se procesan via pasarelas autorizadas (Mercado Pago, Conekta u otras).
+- Los pagos se procesan via pasarelas autorizadas (Mercado Pago, Stripe MX, Clip, Santander, BBVA, Banorte u otras).
 - La falta de pago suspende el servicio tras 7 dias de gracia.
 - La comision por transaccion aplica segun el plan.
 
@@ -95,10 +95,27 @@ El servicio se presta en modalidad SaaS (Software as a Service), sin transferenc
 
 ## 11. Proteccion de datos personales
 
-- El Titular cumple con la LFPDPPP.
-- Los datos se procesan segun el Aviso de Privacidad.
-- El Cliente es responsable de obtener consentimiento de sus usuarios.
-- El Titular aplica medidas de seguridad: cifrado, respaldo, auditoria.
+11.1 EL PRESTADOR cumple con la LFPDPPP 2025 y su Reglamento.
+
+11.2 Los datos personales se procesan conforme a la Politica de Privacidad disponible en `legal/politica-privacidad.md`, que forma parte integral de estos Terminos.
+
+11.3 EL CLIENTE es responsable de:
+- Obtener consentimiento del tutor para jugadores menores de 18 anos.
+- Obtener consentimiento expreso y por escrito para datos de salud.
+- Informar a los tutores sobre sus derechos ARCO.
+- Canalizar solicitudes ARCO de tutores al PRESTADOR.
+
+11.4 Derechos ARCO: El titular o su representante legal puede ejercer Acceso, Rectificacion, Cancelacion y Oposicion, asi como revocacion, limitacion y portabilidad, enviando solicitud a privacidad@[dominio].
+
+11.5 Plazo de respuesta: 20 dias habiles.
+
+11.6 Transferencias internacionales: EL PRESTADOR realiza transferencias a encargados en EE.UU. y Mexico, conforme al articulo 36 de la LFPDPPP, con consentimiento del titular.
+
+11.7 Conservacion: Los datos se conservan 5 anos (financieros y operativos) o segun la seccion 7 de la Politica de Privacidad.
+
+11.8 Anonimizacion: Al terminar los plazos, los datos se anonimizan o eliminan.
+
+11.9 Autoridad: La Secretaria de Anticorrupcion y Buen Gobierno es la autoridad de proteccion de datos.
 
 ## 12. Confidencialidad
 
