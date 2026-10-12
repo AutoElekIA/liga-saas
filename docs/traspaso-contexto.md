@@ -110,8 +110,8 @@ liga-saas/
 ## 5. Supabase
 
 **Project:** `liga-saas`
-**Ref:** `sqanjttnnutvdgbotfvc`
-**URL:** `https://sqanjttnnutvdgbotfvc.supabase.co`
+**Ref:** `<project-ref>` (ver Supabase Console > Settings > General)
+**URL:** `https://<project-ref>.supabase.co`
 **Plan:** Free
 
 **Credenciales:**
