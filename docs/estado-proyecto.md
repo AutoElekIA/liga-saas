@@ -1,6 +1,6 @@
 # Estado del Proyecto
 
-**Ultima actualizacion:** Octubre 2026
+**Ultima actualizacion:** 12 de octubre de 2026
 
 ## Resumen
 
@@ -9,8 +9,8 @@
 | 1 - Fundamentos | Completada | 8/8 documentos |
 | 2 - Producto | Completada | 139/139 historias |
 | 3 - Negocio y Legal | Completada | 15/15 entregables |
-| 4 - Construccion | Completada | 6/6 hitos |
-| 5 - Salida y Escala | Completada | 6/6 hitos |
+| 4 - Construccion | En progreso | 2/6 hitos |
+| 5 - Salida y Escala | Pendiente | 0/6 hitos |
 
 ## Detalle por oleada
 
@@ -63,23 +63,68 @@
 - [x] Manual de soporte
 - [x] Playbook de ventas
 
-### Oleada 4 - Construccion (Completada)
+### Oleada 4 - Construccion (En progreso)
 
-- [x] CON-01 - Brief tecnico para desarrollador
-- [x] CON-02 - Proceso de seleccion y contratacion
-- [x] CON-03 - Kickoff y configuracion del entorno
-- [x] CON-04 - Desarrollo del MVP
-- [x] CON-05 - Validacion con Liga Cero
-- [x] CON-06 - Pilotos con los 4 excompaneros
+**Estrategia:** desarrollo interno (Carlos + Claude). Sin dev externo.
 
-### Oleada 5 - Salida y Escala (Completada)
+**Hitos:**
 
-- [x] OLE-01 - Estrategia con periodista vocero
-- [x] OLE-02 - Landing page publica
-- [x] OLE-03 - Contenido y SEO
-- [x] OLE-04 - Registro de marca (ejecucion)
-- [x] OLE-05 - CRM y proceso comercial
-- [x] OLE-06 - Pitch para inversionistas
+- [x] Hito 0 - Fundacion tecnica (cerrado)
+- [x] Hito 1 - Auth + multi-tenant (cerrado)
+- [ ] Hito 2 - Ligas, equipos, jugadores (pendiente)
+- [ ] Hito 3 - Calendario, programacion, arbitros
+- [ ] Hito 4 - Resultados, tablas, sanciones
+- [ ] Hito 5 - Pagos, suscripciones, facturacion
+- [ ] Hito 6 - PWA, notificaciones, panel operador
+
+#### Hito 0 - Fundacion tecnica (CERRADO)
+
+- Monorepo pnpm 12 + Turborepo 2
+- API NestJS 10 con /health
+- Web Next.js 14 con landing + login
+- Prisma 5.22 + schema inicial
+- Docker Compose (Postgres 16 + Redis 7)
+- Packages compartidos (db, types, config, ui)
+- CI en GitHub Actions
+- ESLint configurado
+
+#### Hito 1 - Auth + multi-tenant (CERRADO)
+
+- Cliente Supabase en API + healthcheck extendido
+- Modulo Auth con SupabaseAuthGuard
+- RBAC con 10 roles y jerarquia
+- RLS FORCE con rol `liga_app` y helper `withTenant`
+- Frontend auth real con Supabase SSR
+- Paginas: `/`, `/login`, `/dashboard`, `/logout`
+- Middleware de refresco de sesion
+
+**Pendiente corto del Hito 1:**
+- `POST /auth/register` (crea organizacion + usuario en transaccion)
+- Seed con organizacion demo
+- Tests E2E del flujo registro -> login -> crear liga
+
+### Oleada 5 - Salida y Escala (Pendiente)
+
+- [ ] OLE-01 - Estrategia con periodista vocero
+- [ ] OLE-02 - Landing page publica
+- [ ] OLE-03 - Contenido y SEO
+- [ ] OLE-04 - Registro de marca (ejecucion)
+- [ ] OLE-05 - CRM y proceso comercial
+- [ ] OLE-06 - Pitch para inversionistas
+
+## Stack tecnologico
+
+| Capa | Tecnologia |
+|---|---|
+| Monorepo | pnpm 12 + Turborepo 2 |
+| Backend | NestJS 10 + TypeScript + Express |
+| Frontend | Next.js 14 (App Router) + React 18 + Tailwind 3 |
+| ORM | Prisma 5.22 |
+| Base de datos | PostgreSQL 16 con RLS + FORCE |
+| Auth | Supabase Auth (@supabase/ssr) |
+| Cache/queues | Redis 7 |
+| CI/CD | GitHub Actions |
+| Hosting objetivo | Por definir (Railway o Render) |
 
 ## Metricas clave
 
@@ -89,39 +134,56 @@
 | MRR | $0 | $60,000 MXN |
 | Documentos completados | 40+ | - |
 | Historias en backlog | 139 | - |
-| Historias implementadas | 0 | 139 |
+| Historias implementadas | ~10 | 139 |
+| Hitos tecnicos cerrados | 2/6 | 6/6 |
 | Inversion inicial | $0 | $150,000 MXN |
 
 ## Hitos del proyecto
 
 | Hito | Fecha objetivo | Estado |
 |---|---|---|
-| Oleada 1 completada | Octubre 2026 | Completado |
-| Oleada 2 completada | Octubre 2026 | Completado |
-| Oleada 3 completada | Octubre 2026 | Completado |
-| Oleada 4 completada | Octubre 2026 | Completado |
-| Oleada 5 completada | Octubre 2026 | Completado |
-| Desarrollador contratado | Diciembre 2026 | Pendiente |
-| MVP v1.0 | Junio 2027 | Pendiente |
-| 4 pilotos operando | Julio 2027 | Pendiente |
-| Primer cliente pagando | Julio 2027 | Pendiente |
+| Cierre Oleada 1 | Octubre 2026 | Completado |
+| Cierre Oleada 2 | Octubre 2026 | Completado |
+| Cierre Oleada 3 | Octubre 2026 | Completado |
+| Hito 0 - Fundacion tecnica | Octubre 2026 | Completado |
+| Hito 1 - Auth + multi-tenant | Octubre 2026 | Completado |
+| Hito 2 - Ligas, equipos, jugadores | Por definir | Pendiente |
+| Hito 3 - Calendario y arbitros | Por definir | Pendiente |
+| Hito 4 - Resultados y sanciones | Por definir | Pendiente |
+| Hito 5 - Pagos y facturacion | Por definir | Pendiente |
+| Hito 6 - PWA y notificaciones | Por definir | Pendiente |
+| MVP v1.0 | Por definir | Pendiente |
+| Primer cliente pagando | Por definir | Pendiente |
 | 20 ligas activas | Octubre 2027 | Pendiente |
 
 ## Proximos pasos inmediatos
 
-Toda la documentacion esta completa. Los siguientes pasos son de ejecucion:
-
-1. Configurar entorno tecnico (ramas, CI/CD, servicios).
-2. Publicar vacante de desarrollador.
-3. Iniciar entrevistas.
-4. Contratar al primer dev.
-5. Arrancar sprint 1.
+1. Cerrar pendiente corto del Hito 1:
+   - `POST /auth/register`
+   - Seed de organizacion demo
+   - Tests E2E del flujo de registro
+2. Arrancar Hito 2 (ligas, equipos, jugadores):
+   - Modulo `LigasModule` con CRUD protegido por RLS
+   - Modulo `EquiposModule` con registro y delegados
+   - Modulo `JugadoresModule` con carnet digital
+3. Aplicar kit de marca AutoElekIA (iconos, colores)
+4. Completar CI (Supabase env vars para tests)
 
 ## Riesgos actuales
 
 | Riesgo | Nivel | Mitigacion |
 |---|---|---|
-| No encontrar dev en 4 semanas | Medio | Ampliar canales a Workana y Upwork |
-| Costos iniciales mayores | Bajo | Stack gratuito inicial |
-| MVP toma mas tiempo | Medio | Priorizar modulos criticos |
-| Adopcion lenta de pilotos | Bajo | Onboarding asistido |
+| Complejidad del MVP (22 sprints) | Alto | Priorizar modulos criticos, Hitos incrementales |
+| Costos iniciales mayores | Bajo | Stack gratuito inicial (Supabase Free, Railway trial) |
+| Adopcion lenta de pilotos | Bajo | Onboarding asistido, Liga Cero como caso de uso |
+| Deuda tecnica de tests | Medio | Agregar cobertura desde Hito 2 |
+| Cambios de alcance | Medio | Aplicar regla: si algo va a fallar, resolver antes de avanzar |
+
+## Documentos de referencia
+
+- `docs/traspaso-contexto.md` — Documento vivo, fuente de verdad operativa
+- `docs/06-roadmap.md` — Roadmap por oleadas
+- `docs/02-mvp-scope.md` — 37 modulos, 139 historias
+- `docs/03-modelo-entidad-relacion.md` — Modelo de datos
+- `docs/04-arquitectura-tecnica.md` — Arquitectura tecnica
+- `docs/08-decisiones.md` — Decisiones arquitectonicas (ADRs)

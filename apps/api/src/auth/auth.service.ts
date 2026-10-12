@@ -1,6 +1,6 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { prisma } from '@liga-saas/db';
-import { Rol } from '@liga-saas/types';
+import type { Rol } from '@liga-saas/types';
 import { AuthenticatedUser } from './guards/supabase-auth.guard';
 
 export interface UserProfile {

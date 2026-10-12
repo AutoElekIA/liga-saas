@@ -6,7 +6,8 @@ import {
 } from '@nestjs/common';
 import { Reflector } from '@nestjs/core';
 import { prisma } from '@liga-saas/db';
-import { Rol, ROLE_HIERARCHY } from '@liga-saas/types';
+import type { Rol } from '@liga-saas/types';
+import { ROLE_HIERARCHY } from '@liga-saas/types';
 import { ROLES_KEY } from '../decorators/roles.decorator';
 import { RequestWithUser } from './supabase-auth.guard';
 

@@ -53,7 +53,7 @@ El proyecto avanza en 5 oleadas. Todas completadas.
 | NDAs | Completado |
 | Marca IMPI (guia) | Completado |
 
-## Oleada 4 - Construccion (COMPLETADA)
+## Oleada 4 - Construccion (EN PROGRESO)
 
 **Objetivo:** Preparar la construccion y los pilotos.
 
@@ -66,7 +66,7 @@ El proyecto avanza en 5 oleadas. Todas completadas.
 | CON-05 - Validacion con Liga Cero | Completado |
 | CON-06 - Pilotos con los 4 excompaneros | Completado |
 
-## Oleada 5 - Salida y Escala (COMPLETADA)
+## Oleada 5 - Salida y Escala (PENDIENTE)
 
 **Objetivo:** Preparar la comercializacion y expansion.
 
@@ -86,10 +86,10 @@ El proyecto avanza en 5 oleadas. Todas completadas.
 | Cierre Oleada 1 | Octubre 2026 | Completado |
 | Cierre Oleada 2 | Octubre 2026 | Completado |
 | Cierre Oleada 3 | Octubre 2026 | Completado |
-| Cierre Oleada 4 | Octubre 2026 | Completado |
-| Cierre Oleada 5 | Octubre 2026 | Completado |
-| Desarrollador contratado | Diciembre 2026 | Pendiente |
-| MVP v1.0 listo | Junio 2027 | Pendiente |
+| Cierre Oleada 4 | Por definir | En progreso (2/6 hitos) |
+| Cierre Oleada 5 | Por definir | Pendiente |
+| Estrategia de desarrollo | Octubre 2026 | Carlos + Claude |
+| MVP v1.0 listo | Por definir | Pendiente |
 | 4 pilotos operando | Julio 2027 | Pendiente |
 | Primer cliente pagando | Julio 2027 | Pendiente |
 | Lanzamiento comercial | Agosto 2027 | Pendiente |

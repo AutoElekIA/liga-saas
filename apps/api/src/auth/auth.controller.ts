@@ -1,5 +1,4 @@
 import { Controller, Get, UseGuards } from '@nestjs/common';
-import { Rol } from '@liga-saas/types';
 import { AuthService, UserProfile } from './auth.service';
 import {
   AuthenticatedUser,
