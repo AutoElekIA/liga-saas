@@ -88,31 +88,52 @@ Documento de referencia rápida. Cada decisión tiene contexto y estado.
 - Marketplace + OAuth + split → Fase 2
 - Estado: Confirmada
 
-## Reclutamiento
+## Desarrollo
 
-### Perfil buscado
-- Senior Full Stack
-- NestJS + PostgreSQL + RLS + PWA verificables
-- NO junior ni semi-senior
-- Estado: Confirmada
+### Estrategia: desarrollo interno (Carlos + Claude)
 
-### Presupuesto
-- Base: $2,000 USD/mes maximo para el dev principal
-- Variable por sprint + bono MVP
-- Estado: Confirmada
+- Decisor: Carlos Aleman (@AutoElekIA)
+- Fecha: 12 de octubre de 2026
+- Motivo principal: se revisaron los trabajos de los candidatos al
+  puesto de Senior Full Stack. El nivel tecnico observado fue inferior
+  al trabajo que Carlos produce asistido por IA. No se justifica pagar
+  $2,000 USD/mes por un recurso que no aporta valor superior al ya
+  disponible internamente.
+- Razon complementaria: el flujo actual (Carlos + Claude) permite
+  iteracion diaria sin onboarding, control total del roadmap y cero
+  dependencia de terceros para el nucleo del producto.
+- Modelo operativo:
+  - Carlos: direccion, revision, ejecucion de comandos, decisiones.
+  - Claude: codigo completo, migraciones, tests, PRs, diagnosticos.
+  - Todo el trabajo se audita via PRs y CI en GitHub.
+- Criterio de reevaluacion:
+  - El alcance del MVP crece mas alla de lo que una persona asistida
+    por IA puede mantener.
+  - Aparece un candidato con nivel claramente superior al actual.
+  - El proyecto requiere presencia fisica o legal (contador, abogado).
+- Estado: Confirmada (2026-10-12)
 
-### Zona horaria
-- Titular: 10pm-8am Mexico (nocturno)
-- Priorizar: Japon, Uzbekistán, Europa del Este
-- Problematico: LATAM, USA, Canada
-- Estado: Confirmada
+### Historial: estrategia de reclutamiento (CANCELADA)
 
-### Proceso de seleccion
-- Filtro por GitHub + propuesta tecnica
-- Entrevista 45 min
-- Prueba tecnica pagada ($1,500-3,000 MXN)
-- NDA + cesion antes de documentacion
-- Estado: Confirmada
+Se preparo un paquete completo para contratar un Senior Full Stack
+(NestJS + PostgreSQL + RLS + PWA). Incluia:
+
+- Perfil buscado: Senior Full Stack verificable, no junior.
+- Presupuesto: $2,000 USD/mes base + variable por sprint + bono MVP.
+- Zona horaria: priorizar Japon, Uzbekistan, Europa del Este para
+  coincidir con el horario nocturno del titular (10pm-8am CDMX).
+- Proceso: filtro por GitHub, propuesta tecnica, entrevista de 45 min,
+  prueba tecnica pagada ($1,500-3,000 MXN), NDA + cesion de derechos.
+
+**Cancelada el 2026-10-12** al revisar los trabajos de los candidatos:
+el nivel tecnico observado fue inferior al trabajo interno asistido
+por IA.
+
+Documentos historicos preservados en `docs/historico/reclutamiento/`:
+- `costeo-equipo.md`
+- `estado-reclutamiento.md`
+- `paquete-reclutamiento.md`
+
 
 ## Infraestructura
 
