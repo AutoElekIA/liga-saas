@@ -134,10 +134,18 @@ Equipos maximo: [numero]
 
 ## Decima primera - Proteccion de datos personales
 
-1. EL PRESTADOR cumple con la LFPDPPP.
-2. EL CLIENTE es responsable de obtener consentimiento de sus usuarios finales.
-3. EL PRESTADOR implementa medidas de seguridad tecnicas y administrativas.
-4. Ambas partes firman el Aviso de Privacidad correspondiente.
+1. EL PRESTADOR cumple con la LFPDPPP (Ley Federal de Proteccion de Datos Personales en Posesion de los Particulares, 2025) y su Reglamento.
+2. EL PRESTADOR es responsable del tratamiento de los datos que recaba a traves de la plataforma.
+3. EL CLIENTE es responsable de obtener el consentimiento de sus usuarios finales, incluyendo:
+   - Consentimiento del tutor para jugadores menores de 18 anos.
+   - Consentimiento expreso y por escrito para datos de salud (lesiones).
+   - Informacion sobre finalidades primarias y secundarias.
+4. EL CLIENTE se obliga a informar a los tutores sobre sus derechos ARCO y el procedimiento para ejercerlos.
+5. EL CLIENTE canalizara al PRESTADOR cualquier solicitud ARCO de tutores o jugadores que afecte datos en la plataforma.
+6. EL PRESTADOR implementa medidas de seguridad tecnicas y administrativas conforme a la seccion 9 de la Politica de Privacidad.
+7. EL PRESTADOR no usara los datos del CLIENTE para finalidades distintas a las del servicio, salvo consentimiento expreso.
+8. Ambas partes firman el Aviso de Privacidad correspondiente, que se anexa como Anexo C.
+9. Las transferencias internacionales de datos se realizan conforme al articulo 36 de la LFPDPPP, con consentimiento del titular.
 
 ## Decima segunda - Limitacion de responsabilidad
 
@@ -194,7 +202,7 @@ Para notificaciones:
 Forman parte del contrato:
 - Anexo A: Plan contratado y precio.
 - Anexo B: Nivel de servicio (SLA).
-- Anexo C: Aviso de Privacidad.
+- Anexo C: Aviso de Privacidad (legal/politica-privacidad.md).
 - Anexo D: Terminos y Condiciones del SaaS.
 
 ---
