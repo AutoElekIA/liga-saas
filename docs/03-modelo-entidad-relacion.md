@@ -1,14 +1,14 @@
-# Modelo Entidad-Relación
+# Modelo Entidad-Relacion
 
 ## Principios
-1. Multi-tenant por diseño (todo dato pertenece a una organización).
-2. Jugador es global, inscripción es por torneo.
+1. Multi-tenant por diseno (todo dato pertenece a una organizacion).
+2. Jugador es global, inscripcion es por torneo.
 3. Fianza y saldo operativo separados.
 4. Todo movimiento es auditable. Nada se borra.
-5. Estados explícitos en cada entidad.
-6. Configuración por liga. Nada hardcodeado.
+5. Estados explicitos en cada entidad.
+6. Configuracion por liga. Nada hardcodeado.
 
-## Núcleo Multi-Tenant
+## Nucleo Multi-Tenant
 
 ### Organizacion
 - id, nombre, rfc, plan_saas, estado, created_at
@@ -22,7 +22,7 @@
 ## Personas y Roles
 
 ### Usuario
-- id, email (único), telefono, password_hash, estado, created_at
+- id, email (unico), telefono, password_hash, estado, created_at
 
 ### Rol
 - id, nombre (superadmin, admin_org, admin_liga, admin_complejo, delegado, subdelegado, jugador, arbitro, prensa, tutor), permisos[]
@@ -31,10 +31,18 @@
 - usuario_id, rol_id, liga_id (nullable), complejo_id (nullable), vigencia
 
 ### Jugador
-- id (global por organización), usuario_id, nombre_completo, documento_tipo, documento_numero (único por organización), fecha_nacimiento, foto_url, telefono, email, contacto_emergencia, tutor_id (nullable), estado (borrador/pendiente/habilitado/inhabilitado/sancionado), created_at
+- id (global por organizacion), usuario_id, nombre_completo, documento_tipo, documento_numero (unico por organizacion), fecha_nacimiento, foto_url, telefono, email, contacto_emergencia, tutor_id (nullable), estado (borrador/pendiente/habilitado/inhabilitado/sancionado), created_at
 
 ### Tutor
-- id, nombre, documento, telefono, email, consentimiento_firmado
+- id
+- usuario_id (nullable)              # si el tutor se registra como usuario
+- nombre
+- documento
+- telefono
+- email
+- consentimiento_firmado
+- vigencia_consentimiento
+- created_at
 
 ## Equipos e Inscripciones
 
@@ -48,9 +56,9 @@
 - id, jugador_id, equipo_id, torneo_id, dorsal (nullable), posicion (nullable), estado (activo/transferido/baja), fecha_alta, fecha_baja, ventana_transferencia_id (nullable)
 
 ### Carnet
-- id, jugador_id, liga_id, qr_hash (único), foto_url, estado (activo/revocado), vigencia_inicio, vigencia_fin, created_at
+- id, jugador_id, liga_id, qr_hash (unico), foto_url, estado (activo/revocado), vigencia_inicio, vigencia_fin, created_at
 
-## Torneos y Categorías
+## Torneos y Categorias
 
 ### Torneo
 - id, liga_id, nombre, temporada, formato (liga/grupos+eliminacion/ida_vuelta), fecha_apertura_inscripcion, fecha_cierre_inscripcion, fecha_inicio, fecha_fin, estado (borrador/inscripcion/en_curso/pausado/cerrado/cancelado), campeon_equipo_id (nullable), created_at
@@ -61,7 +69,7 @@
 ### VentanaTransferencia
 - id, torneo_id, fecha_inicio, fecha_fin, permite_altas, permite_bajas, activa
 
-## Reglas y Configuración
+## Reglas y Configuracion
 
 ### ReglaLiga
 - id, liga_id, tipo (puntos/desempate/sancion/elegibilidad/cobro), clave, valor (json), version, vigencia_inicio, vigencia_fin (nullable), created_by
@@ -96,8 +104,39 @@
 
 ## Pagos y Transacciones
 
+### PasarelaDisponible
+- id
+- clave                 # mercadopago | stripe | clip | santander | bbva | banorte
+- nombre_comercial
+- pais                   # MX
+- metodos_soportados     # json
+- activa_globalmente     # bool
+
+### ConfiguracionPasarela
+- id
+- organizacion_id
+- pasarela              # mercadopago | stripe | clip | santander | bbva | banorte
+- credenciales          # cifradas
+- activa                # bool
+- comision_pasarela     # % que cobra la pasarela
+- comision_saas         # % que cobramos nosotros
+- created_at, updated_at
+
 ### Pago
-- id, usuario_id, equipo_id, concepto_cobro_id, monto, moneda, metodo (tarjeta/spei/oxxo/efectivo_digital/mercadopago/conekta), pasarela, referencia_externa, estado (pendiente/aprobado/rechazado/reembolsado), fecha, created_at
+- id
+- usuario_id
+- equipo_id
+- concepto_cobro_id
+- monto
+- moneda
+- metodo                # tarjeta | spei | oxxo | efectivo_digital | transferencia
+- pasarela              # mercadopago | stripe | clip | santander | bbva | banorte | otro
+- pasarela_config_id    # nullable, si hay multiples cuentas por liga
+- referencia_externa
+- pais_procesamiento    # MX | US | AR
+- estado                # pendiente | aprobado | rechazado | reembolsado
+- fecha
+- created_at
 
 ### Reconciliacion
 - id, pago_id, estado (conciliado/discrepancia/pendiente), notas, resuelto_por, created_at
@@ -144,7 +183,7 @@
 ### ApelacionDisputa
 - id, disputa_id, motivo, evidencia_url, estado, resuelto_por, created_at
 
-## Tabla, Estadísticas y Premios
+## Tabla, Estadisticas y Premios
 
 ### TablaPosicion
 - id, torneo_id, categoria_id, equipo_id, partidos_jugados, ganados, empatados, perdidos, goles_favor, goles_contra, diferencia, puntos, fair_play, updated_at
@@ -158,7 +197,7 @@
 ### FondoPremios
 - id, torneo_id, fuente (inscripciones/patrocinio/fianza_ejecutada/otro), monto, estado, created_at
 
-## Comunicación y Notificaciones
+## Comunicacion y Notificaciones
 
 ### Notificacion
 - id, destinatario_id, tipo, canal (push/email/whatsapp/sms), payload (json), estado (pendiente/enviada/leida/fallida), enviada_at, leida_at, created_at
@@ -177,16 +216,34 @@
 ### MensajeTicket
 - id, ticket_id, autor_id, mensaje, adjuntos (json), created_at
 
-## Auditoría y Cumplimiento
+## Auditoria y Cumplimiento
 
 ### Auditoria
 - id, entidad, entidad_id, accion (crear/editar/eliminar/aprobar/rechazar/ejecutar), actor_id, actor_rol, valores_anteriores (json), valores_nuevos (json), motivo, ip, user_agent, created_at
 
 ### Consentimiento
-- id, jugador_id (o tutor_id), tipo (datos_personales/imagen/menor_edad), version_documento, aceptado (bool), fecha, ip, created_at
+- id
+- jugador_id (nullable)      # si el titular es el jugador
+- tutor_id (nullable)        # si el titular es el tutor
+- tipo                       # datos_personales | imagen | menor_edad | datos_salud
+- version_documento
+- aceptado (bool)
+- fecha, ip, created_at
 
 ### SolicitudARCO
-- id, usuario_id, tipo (acceso/rectificacion/cancelacion/oposicion), estado, respuesta, resuelto_por, created_at
+- id
+- solicitante_usuario_id (nullable)      # si es usuario directo
+- solicitante_tutor_id (nullable)        # si es tutor
+- titular_afectado_id                    # usuario, jugador o tutor
+- titular_afectado_tipo                  # usuario | jugador | tutor
+- en_representacion_de                  # nullable, jugador_id si aplica
+- tipo                                   # acceso | rectificacion | cancelacion | oposicion | revocacion | portabilidad | anonimizacion
+- alcance                                # todos_los_datos | finalidad_especifica
+- finalidad_afectada                     # nullable, si es oposicion
+- estado                                 # recibida | en_proceso | resuelta | rechazada
+- respuesta
+- resuelto_por
+- created_at, resuelto_at
 
 ## Historial y Archivo
 
@@ -204,7 +261,7 @@
 ### PublicacionPrensa
 - id, liga_id, autor_id, titulo, cuerpo, imagen_url, estado (borrador/publicada), publicada_at, created_at
 
-## Reglas de Integridad Críticas
+## Reglas de Integridad Criticas
 1. Un jugador no puede estar en dos equipos activos del mismo torneo.
 2. Un dorsal no puede repetirse en el mismo equipo.
 3. Un slot no puede tener dos partidos en la misma fecha y hora.
@@ -212,15 +269,18 @@
 5. Un equipo con saldo operativo insuficiente no puede jugar.
 6. Un jugador sancionado no puede alinearse.
 7. Un jugador sin carnet activo no puede alinearse.
-8. Ningún movimiento de dinero queda sin auditoría.
+8. Ningun movimiento de dinero queda sin auditoria.
 9. Ninguna acta cerrada se modifica sin disputa formal.
 10. Nada se borra: todo se archiva.
+11. Toda solicitud ARCO de un menor debe ser presentada por el tutor registrado o por autoridad competente. El sistema valida la representacion antes de procesarla.
 
-## Índices Críticos
-- Jugador.documento_numero (único por organización)
-- Carnet.qr_hash (único global)
-- Pago.referencia_externa (único por pasarela)
+## Indices Criticos
+- Jugador.documento_numero (unico por organizacion)
+- Carnet.qr_hash (unico global)
+- Pago.referencia_externa (unico por pasarela)
 - Partido.fecha + cancha_id
 - Slot.cancha_id + dia_semana + hora_inicio
 - Auditoria.entidad + entidad_id
 - Notificacion.destinatario_id + estado
+- SolicitudARCO.titular_afectado_id + tipo + estado
+- ConfiguracionPasarela.organizacion_id + pasarela (unico por organizacion)
