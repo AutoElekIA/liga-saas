@@ -9,57 +9,51 @@ on:
 jobs:
   lint-and-test:
     runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_USER: liga
+          POSTGRES_PASSWORD: liga_dev_password
+          POSTGRES_DB: liga_saas_test
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U liga -d liga_saas_test"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 5
+
+    env:
+      DATABASE_URL: postgresql://liga:liga_dev_password@localhost:5432/liga_saas_test
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 12.3.4
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
-
-      - name: Cache dependencies
-        uses: actions/cache@v4
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          cache: 'pnpm'
 
       - name: Install dependencies
-        run: |
-          if [ -f package.json ]; then
-            npm ci || npm install
-          else
-            echo "No package.json yet. Skipping."
-          fi
+        run: pnpm install --frozen-lockfile
+
+      - name: Generate Prisma client
+        run: pnpm --filter @liga-saas/db generate
 
       - name: Lint
-        run: |
-          if [ -f package.json ]; then
-            npm run lint --if-present
-          else
-            echo "No lint script yet."
-          fi
-
-      - name: Type check
-        run: |
-          if [ -f package.json ]; then
-            npm run type-check --if-present
-          else
-            echo "No type-check script yet."
-          fi
-
-      - name: Test
-        run: |
-          if [ -f package.json ]; then
-            npm run test --if-present
-          else
-            echo "No test script yet."
-          fi
+        run: pnpm turbo run lint
 
       - name: Build
-        run: |
-          if [ -f package.json ]; then
-            npm run build --if-present
-          else
-            echo "No build script yet."
-          fi
+        run: pnpm turbo run build
+
+      - name: Test
+        run: pnpm turbo run test

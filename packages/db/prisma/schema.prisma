@@ -1,0 +1,54 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Organizacion {
+  id        String   @id @default(uuid()) @db.Uuid
+  nombre    String
+  rfc       String?  @unique
+  planSaas  String   @default("basico") @map("plan_saas")
+  estado    String   @default("activa")
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  usuarios Usuario[]
+  ligas    Liga[]
+
+  @@map("organizaciones")
+}
+
+model Usuario {
+  id             String   @id @default(uuid()) @db.Uuid
+  organizacionId String   @map("organizacion_id") @db.Uuid
+  email          String   @unique
+  telefono       String?
+  passwordHash   String?  @map("password_hash")
+  estado         String   @default("activo")
+  createdAt      DateTime @default(now()) @map("created_at")
+  updatedAt      DateTime @updatedAt @map("updated_at")
+
+  organizacion Organizacion @relation(fields: [organizacionId], references: [id], onDelete: Cascade)
+
+  @@index([organizacionId])
+  @@map("usuarios")
+}
+
+model Liga {
+  id             String   @id @default(uuid()) @db.Uuid
+  organizacionId String   @map("organizacion_id") @db.Uuid
+  nombre         String
+  deporte        String   @default("futbol7")
+  estado         String   @default("borrador")
+  createdAt      DateTime @default(now()) @map("created_at")
+  updatedAt      DateTime @updatedAt @map("updated_at")
+
+  organizacion Organizacion @relation(fields: [organizacionId], references: [id], onDelete: Cascade)
+
+  @@index([organizacionId])
+  @@map("ligas")
+}
