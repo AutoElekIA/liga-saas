@@ -136,6 +136,12 @@ importers:
 
   apps/api:
     dependencies:
+      '@liga-saas/db':
+        specifier: workspace:*
+        version: link:../../packages/db
+      '@liga-saas/types':
+        specifier: workspace:*
+        version: link:../../packages/types
       '@nestjs/common':
         specifier: ^10.4.15
         version: 10.4.22(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@8.1.1)

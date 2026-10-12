@@ -24,10 +24,12 @@ model Organizacion {
 
 model Usuario {
   id             String   @id @default(uuid()) @db.Uuid
+  supabaseUserId String?  @unique @map("supabase_user_id") @db.Uuid
   organizacionId String   @map("organizacion_id") @db.Uuid
   email          String   @unique
   telefono       String?
   passwordHash   String?  @map("password_hash")
+  rol            String   @default("jugador")
   estado         String   @default("activo")
   createdAt      DateTime @default(now()) @map("created_at")
   updatedAt      DateTime @updatedAt @map("updated_at")
@@ -35,6 +37,7 @@ model Usuario {
   organizacion Organizacion @relation(fields: [organizacionId], references: [id], onDelete: Cascade)
 
   @@index([organizacionId])
+  @@index([supabaseUserId])
   @@map("usuarios")
 }
 
